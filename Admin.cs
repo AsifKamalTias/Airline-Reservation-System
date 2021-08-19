@@ -68,5 +68,33 @@ namespace Airline_Reservation_System
             FormEditFlight formEditFlight = new FormEditFlight(this);
             formEditFlight.Show();
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAddUser formAddUser = new FormAddUser(this);
+            formAddUser.Show();
+        }
+
+        private void btnRemoveUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRemoveUser formRemoveUser = new FormRemoveUser(this);
+            formRemoveUser.Show();
+        }
+
+        private void btnViewUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormViewUser formViewUser = new FormViewUser(this);
+            formViewUser.Show();
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormEditUser formEditUser = new FormEditUser(this);
+            formEditUser.Show();
+        }
     }
 }

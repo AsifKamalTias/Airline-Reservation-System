@@ -116,7 +116,7 @@ namespace Airline_Reservation_System
             // 
             // txtTotalSeat
             // 
-            this.txtTotalSeat.Location = new System.Drawing.Point(624, 466);
+            this.txtTotalSeat.Location = new System.Drawing.Point(624, 478);
             this.txtTotalSeat.Name = "txtTotalSeat";
             this.txtTotalSeat.Size = new System.Drawing.Size(125, 27);
             this.txtTotalSeat.TabIndex = 16;

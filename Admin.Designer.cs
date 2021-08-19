@@ -78,6 +78,7 @@ namespace Airline_Reservation_System
             // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.btnEditUser);
             this.panel5.Controls.Add(this.btnAddUser);
             this.panel5.Controls.Add(this.label2);
@@ -99,6 +100,7 @@ namespace Airline_Reservation_System
             this.btnEditUser.TabIndex = 10;
             this.btnEditUser.Text = "Edit User Information";
             this.btnEditUser.UseVisualStyleBackColor = false;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnAddUser
             // 
@@ -111,6 +113,7 @@ namespace Airline_Reservation_System
             this.btnAddUser.TabIndex = 9;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // label2
             // 
@@ -134,6 +137,7 @@ namespace Airline_Reservation_System
             this.btnViewUser.TabIndex = 4;
             this.btnViewUser.Text = "View Users";
             this.btnViewUser.UseVisualStyleBackColor = false;
+            this.btnViewUser.Click += new System.EventHandler(this.btnViewUser_Click);
             // 
             // btnRemoveUser
             // 
@@ -146,9 +150,11 @@ namespace Airline_Reservation_System
             this.btnRemoveUser.TabIndex = 7;
             this.btnRemoveUser.Text = "Remove User";
             this.btnRemoveUser.UseVisualStyleBackColor = false;
+            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnAddFlight);
             this.panel4.Controls.Add(this.btnEditPlaneDetails);
