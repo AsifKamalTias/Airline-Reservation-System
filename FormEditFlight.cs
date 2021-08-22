@@ -63,7 +63,7 @@ namespace Airline_Reservation_System
 
         }
 
-        private bool IsInvalidInput()
+        private bool IsValidInput()
         {
             if (String.IsNullOrEmpty(this.txtFlightID.Text) || String.IsNullOrEmpty(this.txtFlightName.Text) || String.IsNullOrEmpty(this.txtPrice.Text) || String.IsNullOrEmpty(this.txtTotalSeat.Text) || String.IsNullOrEmpty(this.comboFlightCategory.Text) || String.IsNullOrEmpty(this.comboStartForm.Text) || String.IsNullOrEmpty(this.comboDestination.Text))
             {
@@ -77,7 +77,7 @@ namespace Airline_Reservation_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!IsInvalidInput())
+            if (!IsValidInput() || !IsValidNumber() || IsStartFromDestinationSame())
             {
                 MessageBox.Show("Please fill all the fields properly.");
             }
@@ -94,7 +94,7 @@ namespace Airline_Reservation_System
                     }
                     else
                     {
-                        MessageBox.Show("Unsuccessfull Update Operation");
+                        MessageBox.Show("Unsuccessfull Update Operation.");
                     }
                 }
                 catch(Exception exc)
@@ -107,6 +107,31 @@ namespace Airline_Reservation_System
         private void FormEditFlight_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private bool IsStartFromDestinationSame()
+        {
+            if ((this.comboStartForm.Text).Equals(this.comboDestination.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool IsValidNumber()
+        {
+            if(double.TryParse(this.txtPrice.Text, out double n) && Convert.ToDouble((this.txtPrice.Text))>0 && int.TryParse(this.txtTotalSeat.Text, out int m) && Convert.ToInt32((this.txtTotalSeat.Text)) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

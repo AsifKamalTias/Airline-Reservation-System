@@ -53,7 +53,7 @@ namespace Airline_Reservation_System
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string sqlSearch = "select * from UserInfo where UserId = '" + this.txtSearch.Text + "' or UserName = '"+this.txtSearch.Text+"';";
+            string sqlSearch = "select * from UserInfo where UserId like '" + this.txtSearch.Text + "%' or UserName like '"+this.txtSearch.Text+"%';";
             this.PopulateGridView(sqlSearch);
         }
 

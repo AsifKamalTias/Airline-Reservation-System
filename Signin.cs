@@ -49,20 +49,20 @@ namespace Airline_Reservation_System
                         this.Hide();
                         //MessageBox.Show("Login Successfull");
                         
-                        string reserverId = ds.Tables[0].Rows[0][0].ToString();
-                        string reserverName = ds.Tables[0].Rows[0][1].ToString();
-                        string reserverDOB = ds.Tables[0].Rows[0][2].ToString();
-                        string reserverGender = ds.Tables[0].Rows[0][3].ToString();
-                        string reserverPassword = ds.Tables[0].Rows[0][4].ToString();
+                        string userId = ds.Tables[0].Rows[0][0].ToString();
+                        string userName = ds.Tables[0].Rows[0][1].ToString();
+                        string userDob = ds.Tables[0].Rows[0][2].ToString();
+                        string userGender = ds.Tables[0].Rows[0][3].ToString();
+                        string userPassword = ds.Tables[0].Rows[0][4].ToString();
 
                         if (ds.Tables[0].Rows[0][5].ToString() == "admin")
                         {
-                            Admin admin = new Admin(this);
+                            Admin admin = new Admin(this, userId, userName, userDob, userGender, userPassword);
                             admin.Show();
                         }
                         else if (ds.Tables[0].Rows[0][5].ToString() == "reserver")
                         {
-                            Reserver reserver = new Reserver(this, reserverId, reserverName, reserverDOB, reserverGender, reserverPassword);
+                            Reserver reserver = new Reserver(this, userId, userName, userDob, userGender, userPassword);
                             reserver.Show();
                         }
 
@@ -96,6 +96,18 @@ namespace Airline_Reservation_System
             else
             {
                 return true;
+            }
+        }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkBoxShowPassword.Checked)
+            {
+                this.txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.txtPassword.UseSystemPasswordChar = true;
             }
         }
     }

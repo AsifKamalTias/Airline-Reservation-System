@@ -31,6 +31,8 @@ namespace Airline_Reservation_System
         {
             this.pnlQuickP2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -40,6 +42,7 @@ namespace Airline_Reservation_System
             this.lblSignin = new System.Windows.Forms.Label();
             this.pnlQuickP2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +59,7 @@ namespace Airline_Reservation_System
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.lblPassword);
@@ -63,8 +67,27 @@ namespace Airline_Reservation_System
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Location = new System.Drawing.Point(405, 215);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 314);
+            this.panel1.Size = new System.Drawing.Size(361, 384);
             this.panel1.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.checkBoxShowPassword);
+            this.panel3.Location = new System.Drawing.Point(32, 209);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(283, 29);
+            this.panel3.TabIndex = 5;
+            // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(81, 4);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(132, 24);
+            this.checkBoxShowPassword.TabIndex = 0;
+            this.checkBoxShowPassword.Text = "Show Password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // lblID
             // 
@@ -101,7 +124,7 @@ namespace Airline_Reservation_System
             this.btnSignin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignin.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSignin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSignin.Location = new System.Drawing.Point(115, 213);
+            this.btnSignin.Location = new System.Drawing.Point(125, 299);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(111, 48);
             this.btnSignin.TabIndex = 2;
@@ -152,6 +175,8 @@ namespace Airline_Reservation_System
             this.pnlQuickP2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -169,5 +194,7 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblSignin;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
     }
 }

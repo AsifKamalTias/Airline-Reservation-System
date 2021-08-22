@@ -31,6 +31,7 @@ namespace Airline_Reservation_System
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@ namespace Airline_Reservation_System
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnProfile);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.btnReservationDetails);
@@ -75,6 +77,20 @@ namespace Airline_Reservation_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1182, 655);
             this.panel3.TabIndex = 1;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProfile.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnProfile.Location = new System.Drawing.Point(62, 567);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(189, 48);
+            this.btnProfile.TabIndex = 8;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // panel5
             // 
@@ -220,9 +236,9 @@ namespace Airline_Reservation_System
             this.btnRemovePlane.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnRemovePlane.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemovePlane.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRemovePlane.Location = new System.Drawing.Point(18, 342);
+            this.btnRemovePlane.Location = new System.Drawing.Point(24, 342);
             this.btnRemovePlane.Name = "btnRemovePlane";
-            this.btnRemovePlane.Size = new System.Drawing.Size(217, 52);
+            this.btnRemovePlane.Size = new System.Drawing.Size(211, 52);
             this.btnRemovePlane.TabIndex = 6;
             this.btnRemovePlane.Text = "Remove Flight";
             this.btnRemovePlane.UseVisualStyleBackColor = false;
@@ -321,5 +337,6 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnEditUser;
+        private System.Windows.Forms.Button btnProfile;
     }
 }

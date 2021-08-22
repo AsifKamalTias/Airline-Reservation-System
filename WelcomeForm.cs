@@ -20,8 +20,8 @@ namespace Airline_Reservation_System
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Signin l = new Signin();
-            l.Show();
+            Signin signIn = new Signin();
+            signIn.Show();
         }
     }
 }

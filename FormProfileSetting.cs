@@ -14,18 +14,30 @@ namespace Airline_Reservation_System
     {
         private DataAccess Da { get; set; }
         private Reserver FormReserver { get; set; }
+        private Admin FormAdmin { get; set; }
+        private static byte countBack = 0;
         public FormProfileSetting()
         {
             this.Da = new DataAccess();
             InitializeComponent();
         }
 
-        public FormProfileSetting(Reserver reserver, string ReserverId, string ReserverName, string ReserverPassword) : this()
+        public FormProfileSetting(Reserver formreserver, string rreserverId, string reserverName, string reserverPassword) : this()
         {
-            this.FormReserver = reserver;
-            this.txtID.Text = ReserverId;
-            this.txtName.Text = ReserverName;
-            this.txtPassword.Text = ReserverPassword;
+            this.FormReserver = formreserver;
+            this.txtID.Text = rreserverId;
+            this.txtName.Text = reserverName;
+            this.txtPassword.Text = reserverPassword;
+            countBack = 0;
+        }
+
+        public FormProfileSetting(Admin formAdmin, string adminId, string adminName, string adminPassword) : this()
+        {
+            this.FormAdmin = formAdmin;
+            this.txtID.Text = adminId;
+            this.txtName.Text = adminName;
+            this.txtPassword.Text = adminPassword;
+            countBack = 1;
         }
 
         private void FormProfileSetting_FormClosed(object sender, FormClosedEventArgs e)
@@ -36,14 +48,16 @@ namespace Airline_Reservation_System
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormReserver.Show();
+            if(countBack == 0)
+            {
+                this.FormReserver.Show();
+            }
+            else
+            {
+                this.FormAdmin.Show();
+            }
         }
 
-        private void SetInformation()
-        {
-
-            //this.txtName
-        }
 
         private void btnViewPassword_Click(object sender, EventArgs e)
         {
@@ -53,6 +67,7 @@ namespace Airline_Reservation_System
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             this.txtPassword.Enabled = true;
+            this.btnSave.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -63,6 +78,18 @@ namespace Airline_Reservation_System
             if(countChangePassword == 1)
             {
                 MessageBox.Show("Password Changed");
+            }
+        }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkBoxShowPassword.Checked)
+            {
+                this.txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                this.txtPassword.UseSystemPasswordChar = true;
             }
         }
     }

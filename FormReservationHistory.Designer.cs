@@ -48,6 +48,7 @@ namespace Airline_Reservation_System
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservationList)).BeginInit();
@@ -56,6 +57,7 @@ namespace Airline_Reservation_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblReservationList);
@@ -219,10 +221,11 @@ namespace Airline_Reservation_System
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(442, 266);
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSearch.Location = new System.Drawing.Point(360, 258);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search by Id";
-            this.txtSearch.Size = new System.Drawing.Size(329, 27);
+            this.txtSearch.PlaceholderText = "Search by Reservation id or Customer name or Customer email...";
+            this.txtSearch.Size = new System.Drawing.Size(512, 34);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -231,7 +234,7 @@ namespace Airline_Reservation_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Location = new System.Drawing.Point(442, 224);
+            this.label2.Location = new System.Drawing.Point(357, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 30);
             this.label2.TabIndex = 1;
@@ -256,6 +259,17 @@ namespace Airline_Reservation_System
             this.label1.Size = new System.Drawing.Size(562, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation History";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(428, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(444, 23);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "(by Reservation id or Customer name or Customer email)";
             // 
             // FormReservationHistory
             // 
@@ -300,5 +314,6 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
         private System.Windows.Forms.DataGridViewTextBoxColumn FlightId;
         private System.Windows.Forms.Label lblReservationList;
+        private System.Windows.Forms.Label label3;
     }
 }

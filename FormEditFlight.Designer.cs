@@ -31,6 +31,10 @@ namespace Airline_Reservation_System
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,6 +70,7 @@ namespace Airline_Reservation_System
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirlineInfo)).BeginInit();
@@ -84,6 +89,9 @@ namespace Airline_Reservation_System
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.button1);
@@ -109,6 +117,42 @@ namespace Airline_Reservation_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1182, 647);
             this.panel3.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(968, 211);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(107, 20);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "(Number Only)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(968, 143);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 20);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "(Number Only)";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Location = new System.Drawing.Point(875, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(307, 34);
+            this.panel6.TabIndex = 45;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(305, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "*Start From and Destination cannot be same.";
             // 
             // panel5
             // 
@@ -269,6 +313,7 @@ namespace Airline_Reservation_System
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBack.Location = new System.Drawing.Point(12, 19);
@@ -282,6 +327,7 @@ namespace Airline_Reservation_System
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSave.Location = new System.Drawing.Point(567, 314);
@@ -507,6 +553,8 @@ namespace Airline_Reservation_System
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -554,5 +602,9 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalSeat;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReservedSeat;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

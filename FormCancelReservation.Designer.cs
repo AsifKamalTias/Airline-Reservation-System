@@ -31,6 +31,8 @@ namespace Airline_Reservation_System
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@ namespace Airline_Reservation_System
             this.btnBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSeatxhByEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -74,7 +74,7 @@ namespace Airline_Reservation_System
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtSeatxhByEmail);
+            this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.btnRefresh);
@@ -89,6 +89,25 @@ namespace Airline_Reservation_System
             this.panel3.Size = new System.Drawing.Size(1182, 659);
             this.panel3.TabIndex = 1;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(418, 168);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(181, 27);
+            this.txtSearch.TabIndex = 18;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSeatxhByEmail_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label3.Location = new System.Drawing.Point(39, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(373, 31);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Search by Customer Name or Email";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -102,11 +121,11 @@ namespace Airline_Reservation_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(17, 5);
+            this.label1.Location = new System.Drawing.Point(13, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 20);
+            this.label1.Size = new System.Drawing.Size(358, 20);
             this.label1.TabIndex = 14;
-            this.label1.Text = "*Select required flight from the list and press Cencel.";
+            this.label1.Text = "*Select required Flight from the list and press Cencel.";
             // 
             // btnRefresh
             // 
@@ -260,7 +279,7 @@ namespace Airline_Reservation_System
             // 
             // txtSearchByReservationID
             // 
-            this.txtSearchByReservationID.Location = new System.Drawing.Point(324, 122);
+            this.txtSearchByReservationID.Location = new System.Drawing.Point(418, 120);
             this.txtSearchByReservationID.Name = "txtSearchByReservationID";
             this.txtSearchByReservationID.Size = new System.Drawing.Size(181, 27);
             this.txtSearchByReservationID.TabIndex = 10;
@@ -271,7 +290,7 @@ namespace Airline_Reservation_System
             this.lblPickUpPoint.AutoSize = true;
             this.lblPickUpPoint.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPickUpPoint.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblPickUpPoint.Location = new System.Drawing.Point(55, 116);
+            this.lblPickUpPoint.Location = new System.Drawing.Point(149, 114);
             this.lblPickUpPoint.Name = "lblPickUpPoint";
             this.lblPickUpPoint.Size = new System.Drawing.Size(263, 31);
             this.lblPickUpPoint.TabIndex = 9;
@@ -310,25 +329,6 @@ namespace Airline_Reservation_System
             this.label2.TabIndex = 0;
             this.label2.Text = "Cancel Reservation";
             // 
-            // txtSeatxhByEmail
-            // 
-            this.txtSeatxhByEmail.Location = new System.Drawing.Point(324, 168);
-            this.txtSeatxhByEmail.Name = "txtSeatxhByEmail";
-            this.txtSeatxhByEmail.Size = new System.Drawing.Size(181, 27);
-            this.txtSeatxhByEmail.TabIndex = 18;
-            this.txtSeatxhByEmail.TextChanged += new System.EventHandler(this.txtSeatxhByEmail_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(39, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 31);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Search by Customer Email";
-            // 
             // FormCancelReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -336,6 +336,7 @@ namespace Airline_Reservation_System
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormCancelReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Airline Reservation System | Cancel Reservation";
@@ -378,7 +379,7 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn PickupPoint;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
         private System.Windows.Forms.DataGridViewTextBoxColumn FlightId;
-        private System.Windows.Forms.TextBox txtSeatxhByEmail;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -30,8 +30,9 @@ namespace Airline_Reservation_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -47,16 +48,17 @@ namespace Airline_Reservation_System
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInfo)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label3);
@@ -73,23 +75,32 @@ namespace Airline_Reservation_System
             this.panel1.Size = new System.Drawing.Size(1182, 753);
             this.panel1.TabIndex = 0;
             // 
-            // txtSearch
+            // panel5
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 356);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search by User Id or Name";
-            this.txtSearch.Size = new System.Drawing.Size(289, 27);
-            this.txtSearch.TabIndex = 38;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(424, 464);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(383, 28);
+            this.panel5.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(358, 20);
+            this.label4.Size = new System.Drawing.Size(360, 20);
             this.label4.TabIndex = 38;
-            this.label4.Text = "*Select required user from the list and press Remove.";
+            this.label4.Text = "*Select required User from the list and press Remove.";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(14, 356);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search by User Id or Name";
+            this.txtSearch.Size = new System.Drawing.Size(289, 27);
+            this.txtSearch.TabIndex = 38;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label3
             // 
@@ -258,14 +269,16 @@ namespace Airline_Reservation_System
             this.label1.TabIndex = 0;
             this.label1.Text = "Remove User";
             // 
-            // panel5
+            // label5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(424, 464);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(383, 28);
-            this.panel5.TabIndex = 45;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(132, 327);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 23);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "(by Id or Name)";
             // 
             // FormRemoveUser
             // 
@@ -281,12 +294,12 @@ namespace Airline_Reservation_System
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormRemoveUser_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInfo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +325,6 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label5;
     }
 }

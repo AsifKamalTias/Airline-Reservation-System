@@ -58,7 +58,7 @@ namespace Airline_Reservation_System
 
         private void txtSearchForRemoveFlight_TextChanged(object sender, EventArgs e)
         {
-            string sqlSearch = "select * from FlightInfo where FlightId = '" + this.txtSearchForRemoveFlight.Text + "';";
+            string sqlSearch = "select * from FlightInfo where FlightId like '" + this.txtSearchForRemoveFlight.Text + "%' or FlightName like '"+this.txtSearchForRemoveFlight.Text+"%';";
             this.PopulateGridView(sqlSearch);
         }
 

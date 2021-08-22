@@ -74,6 +74,7 @@ namespace Airline_Reservation_System
 
                 try
                 {
+                    //reserve
                     string sqlAddToReservationDetails = "insert into ReservationDetails values('" + this.txtReservationId.Text + "', 'reserved', '" + this.txtCustomerName.Text + "', '" + this.txtCustomerEmail.Text + "', '" + gender + "', '" + this.dateTimePickerDateOfFlight.Text + "', '" + this.txtPickUpPoint.Text + "', '" + this.txtDestination.Text + "', '" + this.txtFlightId.Text + "');";
                     int countAddToReservedDetails = this.Da.ExecuteUpdateQuery(sqlAddToReservationDetails);
 
@@ -92,6 +93,7 @@ namespace Airline_Reservation_System
                         this.Hide();
                         FormReservation.Show();
                         MessageBox.Show(this.txtReservationId.Text + " Reserved Successfully.");
+
                     }
                     else
                     {

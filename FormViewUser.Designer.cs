@@ -56,7 +56,7 @@ namespace Airline_Reservation_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(524, 234);
+            this.label3.Location = new System.Drawing.Point(529, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 25);
             this.label3.TabIndex = 31;
@@ -79,7 +79,7 @@ namespace Airline_Reservation_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Location = new System.Drawing.Point(112, 234);
+            this.label2.Location = new System.Drawing.Point(118, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(236, 25);
             this.label2.TabIndex = 28;

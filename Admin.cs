@@ -13,14 +13,24 @@ namespace Airline_Reservation_System
     public partial class Admin : Form
     {
         private Signin SignIn { get; set; }
+        private string AdminId { get; set; }
+        private string AdminName { get; set; }
+        private string AdminDob { get; set; }
+        private string AdminGender { get; set; }
+        private string AdminPassword { get; set; }
         public Admin()
         {
             InitializeComponent();
         }
 
-        public Admin(Signin signIn):this()
+        public Admin(Signin signIn, string adminId, string adminName, string adminDOB, string adminGender, string adminPassword) :this()
         {
             this.SignIn = signIn;
+            this.AdminId = adminId;
+            this.AdminName = adminName;
+            this.AdminDob = adminDOB;
+            this.AdminGender = adminGender;
+            this.AdminPassword = adminPassword;
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -95,6 +105,14 @@ namespace Airline_Reservation_System
             this.Hide();
             FormEditUser formEditUser = new FormEditUser(this);
             formEditUser.Show();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormProfileSetting formProfileSetting = new FormProfileSetting(this, AdminId, AdminName, AdminPassword);
+            //FormAdminProfileSettting fromAdminProfileSetting = new FormAdminProfileSettting(this, AdminId, AdminName, AdminPassword);
+            formProfileSetting.Show();
         }
     }
 }

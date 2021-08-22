@@ -54,7 +54,7 @@ namespace Airline_Reservation_System
         private void Clear()
         {
             this.txtSearchByReservationID.Clear();
-            this.txtSeatxhByEmail.Clear();
+            this.txtSearch.Clear();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -104,13 +104,13 @@ namespace Airline_Reservation_System
 
         private void txtSearchByReservationID_TextChanged(object sender, EventArgs e)
         {
-            string sqlSearch = "select * from ReservationDetails where ReservationId = '" + this.txtSearchByReservationID.Text + "';";
+            string sqlSearch = "select * from ReservationDetails where ReservationId like '" + this.txtSearchByReservationID.Text + "%';";
             this.PopulateGridView(sqlSearch);
         }
 
         private void txtSeatxhByEmail_TextChanged(object sender, EventArgs e)
         {
-            string sqlSearch = "select * from ReservationDetails where CustomerEmail = '" + this.txtSeatxhByEmail.Text + "';";
+            string sqlSearch = "select * from ReservationDetails where CustomerEmail like '" + this.txtSearch.Text + "%' or CustomerName like '"+this.txtSearch.Text+"%';";
             this.PopulateGridView(sqlSearch);
         }
     }

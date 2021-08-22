@@ -41,9 +41,11 @@ namespace Airline_Reservation_System
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnViewPassword = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,9 +64,9 @@ namespace Airline_Reservation_System
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(0, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 76);
+            this.label1.Size = new System.Drawing.Size(442, 76);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Setting Profile";
+            this.label1.Text = "Profile Settings";
             // 
             // label2
             // 
@@ -126,6 +128,7 @@ namespace Airline_Reservation_System
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBack.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.btnBack.Location = new System.Drawing.Point(12, 116);
@@ -141,7 +144,7 @@ namespace Airline_Reservation_System
             this.btnChangePassword.BackColor = System.Drawing.SystemColors.Control;
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChangePassword.ForeColor = System.Drawing.Color.Blue;
-            this.btnChangePassword.Location = new System.Drawing.Point(818, 488);
+            this.btnChangePassword.Location = new System.Drawing.Point(826, 439);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(148, 32);
             this.btnChangePassword.TabIndex = 14;
@@ -152,10 +155,13 @@ namespace Airline_Reservation_System
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Enabled = false;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(602, 536);
+            this.btnSave.Location = new System.Drawing.Point(583, 584);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(92, 42);
+            this.btnSave.Size = new System.Drawing.Size(97, 51);
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -163,7 +169,7 @@ namespace Airline_Reservation_System
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnViewPassword);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnChangePassword);
             this.panel1.Controls.Add(this.btnBack);
@@ -180,18 +186,24 @@ namespace Airline_Reservation_System
             this.panel1.Size = new System.Drawing.Size(1182, 753);
             this.panel1.TabIndex = 0;
             // 
-            // btnViewPassword
+            // panel3
             // 
-            this.btnViewPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.btnViewPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnViewPassword.ForeColor = System.Drawing.Color.Blue;
-            this.btnViewPassword.Location = new System.Drawing.Point(818, 436);
-            this.btnViewPassword.Name = "btnViewPassword";
-            this.btnViewPassword.Size = new System.Drawing.Size(148, 32);
-            this.btnViewPassword.TabIndex = 24;
-            this.btnViewPassword.Text = "View Password";
-            this.btnViewPassword.UseVisualStyleBackColor = false;
-            this.btnViewPassword.Click += new System.EventHandler(this.btnViewPassword_Click);
+            this.panel3.Controls.Add(this.checkBoxShowPassword);
+            this.panel3.Location = new System.Drawing.Point(502, 472);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(283, 29);
+            this.panel3.TabIndex = 24;
+            // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(81, 4);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(132, 24);
+            this.checkBoxShowPassword.TabIndex = 0;
+            this.checkBoxShowPassword.Text = "Show Password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // FormProfileSetting
             // 
@@ -200,6 +212,7 @@ namespace Airline_Reservation_System
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormProfileSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Airline Reservation System | Profile Setting";
@@ -208,6 +221,8 @@ namespace Airline_Reservation_System
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -226,6 +241,7 @@ namespace Airline_Reservation_System
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnViewPassword;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
     }
 }

@@ -168,7 +168,7 @@ namespace Airline_Reservation_System
             // 
             this.txtSearchForRemoveFlight.Location = new System.Drawing.Point(27, 246);
             this.txtSearchForRemoveFlight.Name = "txtSearchForRemoveFlight";
-            this.txtSearchForRemoveFlight.PlaceholderText = "Search by Flight Id";
+            this.txtSearchForRemoveFlight.PlaceholderText = "Search by flight id or name...";
             this.txtSearchForRemoveFlight.Size = new System.Drawing.Size(289, 27);
             this.txtSearchForRemoveFlight.TabIndex = 37;
             this.txtSearchForRemoveFlight.TextChanged += new System.EventHandler(this.txtSearchForRemoveFlight_TextChanged);
@@ -180,9 +180,9 @@ namespace Airline_Reservation_System
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(22, 213);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 30);
+            this.label1.Size = new System.Drawing.Size(137, 30);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Search for remove Flight";
+            this.label1.Text = "Search Flight";
             // 
             // panel4
             // 

@@ -76,7 +76,7 @@ namespace Airline_Reservation_System
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string sqlSearch = "select * from ReservationDetails where ReservationId = '" + this.txtSearch.Text + "';";
+            string sqlSearch = "select * from ReservationDetails where ReservationId like '" + this.txtSearch.Text + "%' or CustomerName like '"+ this.txtSearch.Text + "%' or CustomerEmail like '" + this.txtSearch.Text + "%';";
             this.PopulateGridView(sqlSearch);
         }
     }
